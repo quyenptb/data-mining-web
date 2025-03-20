@@ -1,0 +1,216 @@
+/* Tổng thể */
+.file-content {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    max-width: 90%;
+    margin: 30px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .file-content h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  /* Hành động */
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .actions button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .actions button:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Bảng */
+  .editable-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .editable-table th {
+    background-color: #f7f7f7;
+    color: #333333;
+    width: auto;
+    height: auto;
+    font-weight: bold;
+    padding: 12px 12px 12px 12px;
+    text-align: left;
+    border-bottom: 2px solid #e0e0e0;
+    position: relative;
+
+  }
+  
+  .editable-table td {
+    padding: 0px 12px 0px 12px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .editable-table input {
+    width: 100%;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #f9f9f9;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+  }
+  
+  .editable-table input:focus {
+    border: 1px solid #4caf50;
+    box-shadow: 0px 0px 4px rgba(76, 175, 80, 0.4);
+    outline: none;
+    background-color: #ffffff;
+  }
+  
+/* Xóa cột - chỉ là dấu 'x' */
+.delete-column {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: transparent; /* Không có màu nền */
+    color: inherit; /* Kế thừa màu chữ từ thẻ cha */
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 5px;
+    visibility: hidden; /* Ẩn mặc định */
+    transition: none; /* Loại bỏ tất cả hiệu ứng */
+}
+
+th:hover .delete-column {
+    visibility: visible; /* Hiện nút khi hover vào cột */
+}
+
+/* Xóa dòng - chỉ là dấu 'x' */
+.delete-row {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent; /* Không có màu nền */
+    color: inherit; /* Kế thừa màu chữ từ thẻ cha */
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    visibility: hidden; /* Ẩn mặc định */
+    transition: none; /* Loại bỏ tất cả hiệu ứng */
+}
+
+tr:hover .delete-row {
+    visibility: visible; /* Hiện nút khi hover vào dòng */
+}
+  
+  /* Nút lưu */
+  .save-button {
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .save-button:hover {
+    transform: translateY(-2px);
+  }
+  .table-wrapper {
+    max-height: 400px; /* Chiều cao tối đa của bảng */
+    max-width: 100%; /* Chiều rộng tối đa của bảng */
+    overflow-x: auto; /* Thanh trượt ngang nếu cần */
+    overflow-y: auto; /* Thanh trượt dọc nếu cần */
+    border: 1px solid #e0e0e0; /* Tùy chỉnh viền xung quanh bảng */
+    border-radius: 8px; /* Bo góc cho bảng */
+}
+/* Phần thống kê nhỏ ở góc */
+.file-stats {
+    display: flex;
+    top: 20px;
+    right: 20px; /* Đặt bảng ở góc trên bên phải */
+    width: 250px; /* Điều chỉnh chiều rộng của bảng */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .file-stats h2 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .file-stats p {
+    font-size: 14px;
+    margin: 5px;
+  }
+  
+  .file-stats strong {
+    color: #4CAF50;
+  }
+  
+  /* Đảm bảo bảng thống kê không bị tràn ra ngoài màn hình */
+  @media screen and (max-width: 768px) {
+    .file-stats {
+      width: 200px; /* Thu nhỏ bảng trên các thiết bị di động */
+    }
+  }
+  .context-menu {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .context-menu button {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .context-menu button:hover {
+    background: #f5f5f5;
+  }
+  
+  .editable-table-th {
+    width: 100px;
+  }

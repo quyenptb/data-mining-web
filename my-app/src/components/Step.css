@@ -1,0 +1,23 @@
+.step {
+    text-align: center;
+    max-width: 300px;
+  }
+  
+  .step img {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 1rem;
+  }
+
+  
+  
+  .step h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .step p {
+    color: #666;
+    font-size: 1rem;
+  }
